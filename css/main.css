@@ -539,7 +539,7 @@ span{
   transition: color 0.3s;
 }
 .highlight{
-  color: var(--main-color);
+  color: var(--accent-color);
 }
 .gradient-text{
   background: -webkit-linear-gradient(var(--main-color),var(--accent-color),var(--third-two));
