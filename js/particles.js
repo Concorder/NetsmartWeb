@@ -433,7 +433,7 @@ Object.deepExtend = function (e, a) {
 particlesJS("particles-js", {
   "particles": {
     "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-    "color": {"value": "#e3e3e3"},
+    "color": {"value": "#c10d3d"},
     "shape": {
       "type": "circle",
       "stroke": {"width": 0, "color": "#000000"},
@@ -450,7 +450,7 @@ particlesJS("particles-js", {
       "random": true,
       "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}
     },
-    "line_linked": {"enable": true, "distance": 150, "color": "#acacac", "opacity": 0.4, "width": 1},
+    "line_linked": {"enable": true, "distance": 150, "color": "#c10d3d", "opacity": 0.4, "width": 1},
     "move": {
       "enable": true,
       "speed": 6,
