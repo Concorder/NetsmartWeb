@@ -370,6 +370,7 @@ section{
 .sm-mb-2{
   margin-bottom: 60px;
 }
+
 @media (max-width: 768px){
   .xs-mb-1{
     margin-bottom: 30px!important;
@@ -381,6 +382,7 @@ section{
     margin-bottom: unset;
   }
 }
+
 .no-padding{
   padding: 0!important;
 }
@@ -469,6 +471,13 @@ a:hover {
   display: flex;
   align-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.herobanner__container{
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
 }
 nav a {
   text-decoration: none;
@@ -507,9 +516,7 @@ nav {
   0%{opacity: 0}
 100%{opacity: 1}
 }
-canvas{
-  animation: fadeIn 1s ;
-}
+
 .cta i {
   animation: lightsup 3s;
   animation-fill-mode: both;
@@ -684,6 +691,44 @@ footer{
 }
 .grid-h-12{
   grid-row: span 12;
+}
+#phone{
+  width: 420px;
+  height: 500px;
+  margin: auto;
+  background: transparent;
+}
+#phone {
+opacity: 0;
+}
+.cta span{
+  white-space: nowrap;
+}
+#phone.visible  {
+animation-delay: 4s;
+  transition: 3s;
+  animation: fadeIn 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+.herobanner__video{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  animation: fadeInVideo 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInVideo {
+  0%{opacity: 0}
+  100%{opacity: 0.1}
+}
+@media (min-width: 721px){
+  .d-sm-flex{
+    display: flex;
+  }
 }
 
 
