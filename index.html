@@ -42,7 +42,7 @@
       </div>
     </div>
   </header>
-  <section class="herobanner " id="particles-js">
+  <section class="herobanner p-0" id="particles-js">
     <div class="herobanner__container d-sm-flex align-items-center container" >
       <div ><h1 class="cta mb-1">Netsmart</h1>
         <h4 class=" text-white mb-1">is a global leader in mobile payments and messaging.</h4>
@@ -249,7 +249,7 @@
       <div id="messaging" class="col-md-12">
         <h2 class="text-center mb-2 mt-3">Mobile messaging</h2>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-5">
         <p class="mb-2">From small, medium, to large-sized businesses, our SMS business solutions will transform your
           communication by <span
             class="text-main">informing your customers and suppliers of time-critical information</span> via SMS
@@ -258,7 +258,28 @@
       customers anytime</span>, anywhere with NetSmart. Send updates, offers and reminders with our easy-to-use NetSmart
           system and cost-effective mobile messaging.</p>
       </div>
-      <div class="col-md-5 mb-1">
+      <div class="col-md-7 mb-1">
+        <div class="videobg_one">
+          <div class="box1">
+            <video autoplay="" muted="" loop="" poster="poster.jpg">
+              <source src="./img/messagingxdark.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="box2">
+            <video autoplay="" muted="" loop="" poster="poster.jpg">
+              <source src="./img/pexels-jack-sparrow-5977053%20(240p).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="box3">
+            <video autoplay="" muted="" loop="" poster="poster.jpg">
+              <source src="./img/woman_train.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
         <img src="" alt="messaging">
       </div>
       <div class="col-md-12  mb-1">
@@ -635,37 +656,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
-<script>
-  function splashText() {
-    let cta = document.querySelector('.cta');
-    let newCta = "<span>" + cta.innerHTML.replaceAll(" ", " </span><span>") + "</span>";
-    cta.innerHTML = newCta;
-    let words = document.querySelectorAll('.cta span');
-    words.forEach(function (word) {
-
-      let newWord = "";
-      for (let i = 0; i < word.innerHTML.length; i++) {
-        let newSym = "<i>" + word.innerHTML[i] + "</i>";
-        newWord = newWord + newSym;
-      }
-      word.innerHTML = newWord;
-    });
-    //move prize to the new line
-    let lamps = document.querySelectorAll('.cta i');
-    lamps.forEach(function (e) {
-      var randomPoseX = (Math.ceil(Math.random() * 1000));
-      var randomPoseY = (Math.ceil(Math.random() * 1000));
-      e.style.transform = `translate(${randomPoseX}%, ${randomPoseY}%`;
-      var randomDelay = (Math.ceil(Math.random() * 30)) / 10;
-      e.style.animationDelay = randomDelay + "s";
-    });
-  }
-
-  splashText()
-
-  //highlight Text
-
-</script>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
@@ -718,7 +708,7 @@
 
     //Camera setup
     camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0.5, -0.5, 2);
+    camera.position.set(0.5, -0.5, 1.5);
 
     const ambient = new THREE.AmbientLight(0x404040, 2);
     scene.add(ambient);

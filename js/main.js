@@ -99,6 +99,34 @@ sentences.forEach(function (target) {
   });
 });
 
+
+// splashtext
+function splashText() {
+  let cta = document.querySelector('.cta');
+  let newCta = "<span>" + cta.innerHTML.replaceAll(" ", " </span><span>") + "</span>";
+  cta.innerHTML = newCta;
+  let words = document.querySelectorAll('.cta span');
+  words.forEach(function (word) {
+
+    let newWord = "";
+    for (let i = 0; i < word.innerHTML.length; i++) {
+      let newSym = "<i>" + word.innerHTML[i] + "</i>";
+      newWord = newWord + newSym;
+    }
+    word.innerHTML = newWord;
+  });
+  //move prize to the new line
+  let lamps = document.querySelectorAll('.cta i');
+  lamps.forEach(function (e) {
+    var randomPoseX = (Math.ceil(Math.random() * 1000));
+    var randomPoseY = (Math.ceil(Math.random() * 1000));
+    e.style.transform = `translate(${randomPoseX}%, ${randomPoseY}%`;
+    var randomDelay = (Math.ceil(Math.random() * 30)) / 10;
+    e.style.animationDelay = randomDelay + "s";
+  });
+}
+
+splashText()
 //3d phone
 
 
