@@ -978,6 +978,16 @@ position: absolute;
 .cardLarge{
   animation: hueRotate 20s infinite;
 }
+.social{
+  max-height: 30px;
+  max-width: 35px;
+  fill: var(--main-color);
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  background: var(--background-alt);
+}
 @keyframes hueRotate {
   0%{filter: hue-rotate(0deg)}
 100%{filter: hue-rotate(365deg)}
