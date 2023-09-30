@@ -929,7 +929,7 @@ animation-delay: 4s;
   position: absolute;
   left: 50%;
   width: 220px;
-  top: 70%;
+  top: 140px;
   transform: translate(-50%, -50%);
 
 }
