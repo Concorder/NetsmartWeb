@@ -665,8 +665,8 @@ filter: drop-shadow(1px 1px 1px #0000002b)
 .text-input{
   width: 100%;
   border: 0;
-  border-bottom: 1px solid var(--grey-text);
-  background: transparent;
+  background: var(--background-alt);
+  padding: 2px 8px;
 }
 .text-input:focus, .text-input:active{
   border: 0;
@@ -696,6 +696,8 @@ input:focus + label, input:not(:placeholder-shown) + label{
 }
 footer{
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 .grid-container{
   display: grid;
@@ -737,7 +739,7 @@ footer{
   height: 500px;
   margin: auto;
   background: transparent;
-  filter: drop-shadow(20px 20px 10px #0000005e);
+
 }
 #phone {
 opacity: 0;
@@ -926,10 +928,9 @@ animation-delay: 4s;
 .benefit-checkout{
   position: absolute;
   left: 50%;
-  width: 90%;
+  width: 220px;
   top: 70%;
   transform: translate(-50%, -50%);
-  filter: hue-rotate(140deg) drop-shadow(-2px 5px 3px #0000002e);;
 
 }
 .benefit-charging {
@@ -983,11 +984,82 @@ position: absolute;
   max-width: 35px;
   fill: var(--main-color);
 }
-footer{
-  display: flex;
-  flex-direction: column;
-  background: var(--background-alt);
+.code-container{
+position: relative;
 }
+.code-container__text-white {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
+  font-size: 28px;
+  color: #c73030;
+  font-family: monospace;
+}
+.code-container__text-white .glow{
+  color: #fff;
+}
+.code-container__text-red {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+   transform: translate(-50%, 0);
+  font-size: 28px;
+  color: var(--main-color);
+
+}
+.code-container__sms-background{
+width: 100%;
+  z-index: 0;
+}
+.hero__phoneContainer{
+  position: relative;
+  filter: drop-shadow(20px 20px 10px #0000005e);
+
+}
+.staticPhone-left, .staticPhone-right{
+  position: absolute;
+  bottom: 0;
+  width: 170px;
+border-radius: 30px;
+  text-align: center;
+background-size: 96% 96%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.staticPhone-left img, .staticPhone-right img{
+  max-width: 170px;
+}
+.staticPhone-left{
+left: 0;
+  transform: rotate(-20deg);
+  transform-origin: 0 0;
+  text-align: left;
+  background-image: url("../img/campaign1.jpg");
+  opacity: 0;
+  animation: fadeIn 3s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+
+}
+.staticPhone-right{
+  right: 0;
+  transform: rotate(20deg);
+  transform-origin: 100% 0;
+  text-align: right;
+  background-image: url("../img/campaign2.jpg");
+  opacity: 0;
+  animation: fadeIn 3s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+}
+
+label {
+  margin-top: 3px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
 @keyframes hueRotate {
   0%{filter: hue-rotate(0deg)}
 100%{filter: hue-rotate(365deg)}

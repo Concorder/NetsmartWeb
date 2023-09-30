@@ -44,16 +44,24 @@
   </header>
   <section class="herobanner p-0" id="particles-js">
     <div class="herobanner__container d-sm-flex align-items-center container">
-      <div><h1 class="cta mb-1">Netsmart</h1>
+      <div class="col-sm-6"><h1 class="cta mb-1">Netsmart</h1>
         <h4 class=" text-white mb-1">is a global leader in mobile payments and messaging.</h4>
         <p class="herobanner__paragraph text-thin text-white">We provide global partners with a wide range of
           custom-made solutions in carrier billing, bulk messaging, content management and delivery, mobile marketing,
           and customer interaction in over 200 countries.</p>
         <a class="btn herobanner__cta btn-warning" href="#services">Our Services</a>
       </div>
-      <div class="hero__phoneContainer">
+      <div class="hero__phoneContainer col-sm-6">
         <div id="phone" class="visible">
+
         </div>
+        <div class="staticPhone-left">
+          <img src="./img/phoneFrame.png" alt="">
+        </div>
+        <div class="staticPhone-right">
+          <img src="./img/phoneFrame.png" alt="">
+        </div>
+
       </div>
     </div>
   </section>
@@ -153,8 +161,9 @@
                 Pricing</h4>
               <ul class="px-0">
                 <li class="mb-1">Clear breakdowns of fees.</li>
-                <li class="mb-1">Easy-to-understand charges.</li>
-                <li>Price visibility.</li>
+<!--                <li class="mb-1">Easy-to-understand charges.</li>-->
+                <li class="mb-1">Price visibility.</li>
+                <li>Guaranteed timely payments.</li>
               </ul>
             </div>
           </div>
@@ -230,8 +239,16 @@
     </div>
   </section>
   <section id="services" class="py-3">
+
     <div class="container">
       <h2 class="text-center">We specialize on</h2>
+      <div class="col-sm-6">
+        <a href="#payment_methods ">
+          <div class="rounded_container gradient-container__mobile-payment gsapRight">
+            <h4 class="text-center text-white">Mobile payment methods</h4>
+          </div>
+        </a>
+      </div>
       <div class="col-sm-6">
         <a href="#messaging gsapLeft">
           <div class="rounded_container gradient-container__messaging xs-mb-1 gsapLeft">
@@ -240,101 +257,15 @@
           </div>
         </a>
       </div>
-      <div class="col-sm-6">
-        <a href="#payment_methods ">
-          <div class="rounded_container gradient-container__mobile-payment gsapRight">
-            <h4 class="text-center text-white">Mobile payment methods</h4>
-          </div>
-        </a>
-      </div>
+
       <div class="clearfix"></div>
 
-      <div id="messaging" class="col-md-12">
-        <h2 class="text-center mb-2 mt-3">Mobile messaging</h2>
-      </div>
-      <div class="col-md-5">
-        <p class="mb-2">From small, medium, to large-sized businesses, our SMS business solutions will transform your
-          communication by <span
-            class="text-main">informing your customers and suppliers of time-critical information</span> via SMS
-          messaging. SMS is the most immediate, personal, and cost-effective channel.</p>
-        <p>Smartphones are integral to our modern lifestyle, and they’re here to stay. <span class="text-main">Stay connected with your
-      customers anytime</span>, anywhere with NetSmart. Send updates, offers and reminders with our easy-to-use NetSmart
-          system and cost-effective mobile messaging.</p>
-      </div>
-      <div class="col-md-7 mb-1">
-        <div class="videobg_one">
-          <div class="box1">
-            <video autoplay="" muted="" loop="" poster="poster.jpg">
-              <source src="./img/messagingxdark.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="box2">
-            <video autoplay="" muted="" loop="" poster="poster.jpg">
-              <source src="./img/pexels-jack-sparrow-5977053%20(240p).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <div class="box3">
-            <video autoplay="" muted="" loop="" poster="poster.jpg">
-              <source src="./img/woman_train.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12  mb-1">
-        <div class="rounded_container bg-grey gsapUp">
-          <p><span class="text-accent">We specialize</span> in offering low cost
-            SMS solutions for alert services, campaigns to promote your
-            offers, two-factor authentication using One-Time Password (OTP) with SMS, voting, polls
-            competitions etc.
-          </p>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-      <div class="flex-wrap">
-        <div class="col-sm-7 col-xs-12 ">
-          <div class="rounded_container bg-grey gsapLeft">
-            <p class="text-grey my-0">We offer <span class="text-accent">Bulk SMS
-              solutions</span>
-              ranging from a few to
-              hundreds of SMS, with easy
-              installation and affordable
-              prices.</p>
-          </div>
-        </div>
-        <div class="col-sm-5 col-xs-12 ">
-          <div class="rounded_container bg-grey gsapRight">
-
-
-            <p class="text-grey mb-0">With tailored
-              API’s and technical support our
-              SMS solutions
-              <span class="text-accent">easily
-              integrated.</span></p>
-          </div>
-
-        </div>
-      </div>
     </div>
   </section>
-  <section class="bg-grey py-3">
-    <div class="container">
-      <h2 class="text-center ">Mobile messaging is the most
-        direct way
-        of reaching your
-        audience. </h2>
-      <h3 class="text-grey text-center lh-base mb-0 gsapUp">To find out more about
-        our messaging services and how
-        we can benefit your business
-        <a href="#contact_us" class="text-accent">contact us.</a>
-      </h3>
-    </div>
-  </section>
-  <section id="payment_methods" class="py-3">
+
+  <section id="payment_methods" class="pt-0">
     <div class="container ">
+
       <h2 class="text-center">Mobile payment methods</h2>
       <div class="col-sm-6">
         <img class="w-100 gsapRight" src="./img/secure_convinient.png" alt="mobile payment secure fast">
@@ -617,12 +548,12 @@
       <div class="col-xs-12"><h3 class="text-grey">Benefits of<br>Carrier Billing</h3></div>
       <div class="grid-container col-xs-12">
         <div class="rounded_container bg-default grid-w-7 grid-h-3 gsapLeft"><h4>Access to new users </h4>
-          <img class="benefit-users" src="./img/crowd.png" alt="">
+          <img class="benefit-users gsapUp" src="./img/crowd.png" alt="">
 
         </div>
         <div class="rounded_container bg-default grid-w-5 grid-h-6 gsapRight"><h4>Simple and fast checkout
         </h4>
-          <img class="benefit-checkout shadow" src="./img/card-small.png" alt="">
+          <img class="benefit-checkout shadow gsapUp" src="./img/sms.png" alt="">
 
         </div>
         <div class="rounded_container bg-default grid-w-7 grid-h-3 gsapLeft"><h4>Flexible charging frequency and price
@@ -633,7 +564,7 @@
           purchases and subscriptions
 
         </h4>
-          <img class="benefit-subscription2 shadow" src="./img/calendar-small-2.png" alt="">
+          <img class="benefit-subscription2 shadow gsapRight" src="./img/calendar-small-2.png" alt="">
         </div>
       </div>
     </div>
@@ -705,9 +636,117 @@
       </div>
     </div>
   </section>
-  <section class="py-3 bg-grey">
+  <section class="bg-grey">
     <div class="container">
-      <div class="col-sm-5"><img class="gsapLeft cardLarge" src="./img/card-small.png" alt="sum_up"></div>
+      <div id="messaging" class="col-md-12">
+        <h2 class="text-center mb-2">Mobile messaging</h2>
+      </div>
+      <div class="col-md-5">
+        <p class="mb-2">From small, medium, to large-sized businesses, our SMS business solutions will transform your
+          communication by <span
+            class="text-main">informing your customers and suppliers of time-critical information</span> via SMS
+          messaging. SMS is the most immediate, personal, and cost-effective channel.</p>
+        <p>Smartphones are integral to our modern lifestyle, and they’re here to stay. <span class="text-main">Stay connected with your
+      customers anytime</span>, anywhere with NetSmart. Send updates, offers and reminders with our easy-to-use NetSmart
+          system and cost-effective mobile messaging.</p>
+      </div>
+      <div class="col-md-7 mb-1 ">
+        <div class="videobg_one">
+          <div class="box1 gsapUp">
+            <video autoplay="" muted="" loop="" poster="poster.jpg">
+              <source src="./img/messagingxdark.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="box2 gsapLeft">
+            <video autoplay="" muted="" loop="" poster="poster.jpg">
+              <source src="./img/pexels-jack-sparrow-5977053%20(240p).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="box3 gsapRight">
+            <video autoplay="" muted="" loop="" poster="poster.jpg">
+              <source src="./img/woman_train.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12  mb-1">
+        <div class="rounded_container bg-default gsapUp">
+          <p><span class="text-main">We specialize</span> in offering low cost
+            SMS solutions for alert services, campaigns to promote your
+            offers, two-factor authentication using One-Time Password (OTP) with SMS, voting, polls
+            competitions etc.
+          </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="flex-wrap">
+        <div class="col-sm-7 col-xs-12 ">
+          <div class="rounded_container bg-default gsapLeft">
+            <p class="text-grey my-0">We offer <span class="text-main">Bulk SMS
+              solutions</span>
+              ranging from a few to
+              hundreds of SMS, with easy
+              installation and affordable
+              prices.</p>
+          </div>
+        </div>
+        <div class="col-sm-5 col-xs-12 ">
+          <div class="rounded_container bg-default gsapRight">
+
+
+            <p class="text-grey mb-0">With tailored
+              API’s and technical support our
+              SMS solutions
+              <span class="text-main">easily
+              integrated.</span></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class=" py-3">
+    <div class="container">
+      <h2 class="text-center ">Mobile messaging is the most
+        direct way
+        of reaching your
+        audience. </h2>
+      <h3 class="text-grey text-center lh-base mb-0 gsapUp">To find out more about
+        our messaging services and how
+        we can benefit your business
+        <a href="#contact_us" class="text-accent">contact us.</a>
+      </h3>
+    </div>
+  </section>
+  <section class="bg-grey py-3 ">
+    <div class="container">
+      <div class="col-sm-5 shadow">
+        <div class="code-container mb-1 gsapRight">
+        <div class="code-container__text-white onScreenTrigger" id="loading">ONLINE_BILLING</div>
+        <svg class="code-container__sms-background" id="digitalText" fill="url(#grad3)" viewBox="0 0 134 64" xmlns="http://www.w3.org/2000/svg">
+          <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#c10d3d;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5f0b32;stop-opacity:1" />
+          </linearGradient>
+          <path d="M7.99696 0H125.503C129.914 0 133.5 3.55927 133.5 7.93706V43.6538C133.5 48.0316 129.914 51.5909 125.503 51.5909H113.508V62.0083C113.508 62.8888 112.783 63.4965 112.008 63.4965C111.708 63.4965 111.396 63.4097 111.121 63.1988L95.5144 51.5909H7.99696C3.58614 51.5909 0 48.0316 0 43.6538V7.93706C0 3.55927 3.58614 0 7.99696 0Z"/>
+        </svg>
+        </div>
+        <div class="code-container gsapLeft">
+          <div class="code-container__text-red" >SERVICE</div>
+          <svg class="code-container__sms-background " id="digitalText" fill="url(#grad4)" viewBox="0 0 134 64" xmlns="http://www.w3.org/2000/svg">
+            <linearGradient id="grad4" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#f3f3f3;stop-opacity:1" />
+            </linearGradient>
+              <path d="M125.503 0H7.99696C3.58614 0 0 3.55927 0 7.93706V43.6538C0 48.0316 3.58614 51.5909 7.99696 51.5909H19.9924V62.0083C19.9924 62.8888 20.7171 63.4965 21.4918 63.4965C21.7917 63.4965 22.1041 63.4097 22.379 63.1988L37.9856 51.5909H125.503C129.914 51.5909 133.5 48.0316 133.5 43.6538V7.93706C133.5 3.55927 129.914 0 125.503 0Z"/>
+
+          </svg>
+        </div>
+      </div>
       <div class="col-sm-7 gsapRight">
         <p class="mb-2 ">NetSmart now also offers <span class="text-main">Online Billing Services (OBS)</span>, a
           variation of a direct billing service. </p>
@@ -763,7 +802,7 @@
     </div>
     <div class="col-sm-12 py-1 text-center">
       <div><a class="px-1" href="">
-        <svg class="social"  viewBox="0 0 111 110"  xmlns="http://www.w3.org/2000/svg">
+        <svg class="social "  viewBox="0 0 111 110"  xmlns="http://www.w3.org/2000/svg">
           <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" style="stop-color:#c10d3d;stop-opacity:1" />
             <stop offset="100%" style="stop-color:#5f0b32;stop-opacity:1" />
