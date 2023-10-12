@@ -17,6 +17,7 @@ html {
   line-height: 1.4;
   font-weight: 600;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /*
@@ -329,7 +330,7 @@ section{
   padding-left: 20px;
   padding-right: 20px;
 }
-.m-0{
+.m-sm-0{
   margin: 0!important;
 }
 .my-0{
@@ -363,6 +364,9 @@ section{
 .mb-3{
   margin-bottom: 120px;
 }
+.mt-1{
+  margin-top: 30px;
+}
 .mt-3{
   margin-top: 120px;
 }
@@ -376,17 +380,7 @@ section{
   width: 100%;
 }
 
-@media (max-width: 768px){
-  .xs-mb-1{
-    margin-bottom: 30px!important;
-  }
-  .xs-mb-2{
-    margin-bottom: 60px!important;
-  }
-  .sm-mb-1, .sm-mb-2{
-    margin-bottom: unset;
-  }
-}
+
 
 .no-padding{
   padding: 0!important;
@@ -436,15 +430,16 @@ section{
   overflow: hidden;
   position: relative;
 }
+.rounded_container h4{
+  z-index: 5;
+  position: relative;
+
+}
 .grid-container .rounded_container{
   min-height: 200px;
 }
-@media(max-width: 768px){
-  .rounded_container{
-    border-radius: 20px;
-    padding: 30px 20px;
-    height: 100%;
-  }
+.gradient-container h4{
+  text-shadow: 0px 2px 2px #00000080;
 }
 
 .flex-wrap{
@@ -479,7 +474,7 @@ a:hover {
 }
 /*herobanner*/
 .herobanner{
-  height: calc(100vh - 97px);
+  min-height: calc(100vh - 97px);
   margin: auto;
   display: flex;
   align-content: center;
@@ -591,19 +586,22 @@ h2.gradient-text{
   font-weight: 400;
 }
 .partner_images{
-  display: flex !important;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 .partner_images>img {
   margin-bottom: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 150px;
+  max-height: 60px;
 }
 [class*="gradient-container"]{
   background-image: radial-gradient(var(--accent-color), var(--main-color), var(--grey-text) );
   background-size:200% 200%;
   background-repeat: no-repeat;
-  height: 320px;
-  max-width: 480px;
 
 }
 .gradient-container svg {
@@ -612,7 +610,7 @@ filter: drop-shadow(1px 1px 1px #0000002b)
 .gradient-container__messaging{
   background-image: url(../img/messaging.png), radial-gradient(#EE2424, var(--main-color), var(--grey-text));
   background-size: 80%, 200% 200%;
-  background-position: bottom right, top left;
+  background-position: right 30px, top right;
 
 }
 .gradient-container__mobile-payment{
@@ -665,8 +663,10 @@ filter: drop-shadow(1px 1px 1px #0000002b)
 .text-input{
   width: 100%;
   border: 0;
-  background: var(--background-alt);
+  background: var(--background-default);
   padding: 2px 8px;
+  border-bottom: 1px solid var(--background-alt);
+  font-weight: 400;
 }
 .text-input:focus, .text-input:active{
   border: 0;
@@ -790,8 +790,8 @@ animation-delay: 4s;
   justify-content: center;
 }
 
-.box1 video {
-  max-width: 100%;
+.box1 video {width: 100%;
+
 }
 
 .box2 video {
@@ -942,7 +942,6 @@ animation-delay: 4s;
   filter: hue-rotate(45deg) saturate(5) drop-shadow(6px 5px 3px #0000002e);
 }
 .cases .rounded_container {
-  min-height: 350px;
   display: flex;
   transform: translate(0px, 0px);
   margin-bottom: 0px;
@@ -980,7 +979,7 @@ position: absolute;
   animation: hueRotate 20s infinite;
 }
 .social{
-  max-height: 30px;
+  height: 30px;
   max-width: 35px;
   fill: var(--main-color);
 }
@@ -1020,7 +1019,7 @@ width: 100%;
 .staticPhone-left, .staticPhone-right{
   position: absolute;
   bottom: 0;
-  width: 170px;
+  width: 135px;
 border-radius: 30px;
   text-align: center;
 background-size: 96% 96%;
@@ -1028,36 +1027,61 @@ background-size: 96% 96%;
   background-position: center;
 }
 .staticPhone-left img, .staticPhone-right img{
-  max-width: 170px;
+  width: inherit;
 }
 .staticPhone-left{
-left: 0;
+left: 10%;
   transform: rotate(-20deg);
   transform-origin: 0 0;
   text-align: left;
   background-image: url("../img/campaign1.jpg");
   opacity: 0;
-  animation: fadeIn 3s;
+  animation: fadeInLeft 3s;
   animation-delay: 8s;
   animation-fill-mode: forwards;
 
 }
+@keyframes fadeInLeft {
+  0%{
+    opacity: 0;
+    transform: translate(100px, -100px);
+  }
+
+  100%{
+opacity: 1;
+  }
+}
 .staticPhone-right{
-  right: 0;
+  right: 10%;
   transform: rotate(20deg);
   transform-origin: 100% 0;
   text-align: right;
   background-image: url("../img/campaign2.jpg");
   opacity: 0;
-  animation: fadeIn 3s;
+  animation: fadeInRight 3s;
   animation-delay: 8s;
   animation-fill-mode: forwards;
 }
+@keyframes fadeInRight {
+  0%{
+    opacity: 0;
+    transform: translate(-100px, -100px);
+  }
 
+  100%{
+    opacity: 1;
+  }
+}
 label {
   margin-top: 3px;
   margin-left: 8px;
   font-weight: 700;
+}
+.d-xs-visible{
+  display: none;
+}
+.d-sm-visible{
+  display: none;
 }
 
 @keyframes hueRotate {
@@ -1072,6 +1096,84 @@ label {
   .d-sm-flex{
     display: flex;
   }
+  .mt-sm-1{
+    margin-top: 30px;
+  }
+
+}@media(max-width: 768px){
+  .rounded_container{
+    border-radius: 20px;
+    padding: 30px 20px;
+    height: 100%;
+  }
+
+  .flex-wrap{
+    display: block;
+    flex-wrap: nowrap;
+  }
+  .xs-mb-1{
+    margin-bottom: 30px!important;
+  }
+  .xs-mb-2{
+    margin-bottom: 60px!important;
+  }
+  .sm-mb-1, .sm-mb-2{
+    margin-bottom: unset;
+  }
+
+  .d-sm-none{
+    display: none;
+  }
+  .d-sm-visible{
+    display: inline-block;
+  }
+  .rounded_container{
+    text-align: center;
+  }
+  .partner_images{
+    flex-direction: column;
+  }
+  #services{
+    text-align: center;
+  }
+  .arrow-next{
+    bottom: -25px;
+    left: 50%;
+    right: unset;
+    top: unset;
+    transform: translate(-50%, 0) rotate(90deg);
+  }
+  .partner_images{
+    display: block;
+    text-align: center;
+  }
+  .partner_images img{
+    width: 100px;
+  }
+}
+@media (max-width: 492px){
+  h1.cta{
+    font-size: 60px;
+  }
+.mb-xs-1{
+  margin-bottom: 30px;
+}
+.text-xs-left{
+  text-align: left!important;
+}
+  h2, .h2{
+    font-size: 32px;
+  }
+  .d-xs-none{
+    display: none;
+  }
+  [class*='mb-'].m-xs-0{
+    margin-bottom: 0!important;
+  }
+  .d-xs-visible{
+    display: block;
+  }
+
 }
 
 
