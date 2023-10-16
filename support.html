@@ -70,19 +70,21 @@
           promptly to assist you.</p>
         <p>Thank you for choosing our services, and we look forward to assisting you with any questions or concerns you may have.</p>
       </div>
-      <form name="contactSuccess" class="col-sm-4 d-flex flex-column justify-content-between">
+      <form name="contactSuccess" id="contactform" method="post" class="col-sm-4 d-flex flex-column justify-content-between">
         <input type="hidden" name="form-name" value="supportForm">
-        <div class="xs-mb-1 input-container"><input placeholder=" " id="name" name="fullContactName" class="text-input"
+        <div class="xs-mb-1 input-container">
+          <input placeholder=" " id="name" name="fullContactName" class="text-input mb-1"
                                                     type="text"><label
           for="name">Full Name</label></div>
-        <div class="xs-mb-1 input-container"><input placeholder=" " id="contactEmail" name="contactEmail" id="lastname"
-                                                    class="text-input" type="text"><label
-          for="lastname">Email</label></div>
-        <div class="xs-mb-1 input-container"><input placeholder=" " name="formContactPhone" id="email"
-                                                    class="text-input" type="text"><label
-          for="email">Email</label></div>
-        <div class="xs-mb-1 input-container"><textarea style="font-size: 14px; min-height: 100px" placeholder="Details"
-                                                       id="email" class="text-input" type="text"></textarea></div>
+        <div class="xs-mb-1 input-container">
+          <input placeholder=" " id="contactEmail" name="contactEmail" id="contactEmail" class="text-input mb-1" type="text">
+          <label for="contactEmail">Email</label></div>
+        <div class="xs-mb-1 input-container">
+          <input placeholder=" " name="formContactPhone" id="contactPhone" class="text-input mb-1" type="text"><label
+          for="email">Phone</label></div>
+        <div class="xs-mb-1 input-container">
+          <textarea style="font-size: 14px; min-height: 100px" placeholder="Details"
+                                                       id="email" class="text-input mb-1" type="text"></textarea></div>
 
         <input class="btn btn-primary" value="Submit" type="submit"></form>
     </div>
