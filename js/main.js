@@ -136,8 +136,8 @@ function splashText() {
   });
   let lamps = document.querySelectorAll('.cta i');
   lamps.forEach(function (e) {
-    var randomPoseX = (Math.ceil(Math.random() * 1000));
-    var randomPoseY = (Math.ceil(Math.random() * 1000));
+    var randomPoseX = (Math.ceil(Math.random() * 2000) - 1000);
+    var randomPoseY = (Math.ceil(Math.random() * 2000) - 1000);
     e.style.transform = `translate(${randomPoseX}%, ${randomPoseY}%`;
     var randomDelay = (Math.ceil(Math.random() * 30)) / 10;
     e.style.animationDelay = randomDelay + "s";
@@ -145,6 +145,12 @@ function splashText() {
 }
 
 splashText()
+
+//burger trigger
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+  document.querySelector('.mobile-menu').classList.toggle('active');
+});
+
 
 // //hacker text
 // const alphabet = [
