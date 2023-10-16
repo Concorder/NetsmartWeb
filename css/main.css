@@ -565,6 +565,21 @@ a:hover {
   width: 60px;
   z-index: 5;
   border-radius: 50%;
+  animation: shadowEcho 6s infinite;
+}
+@keyframes shadowEcho {
+  0%{box-shadow: 0 0 0 var(--accent-color)}
+  20%{box-shadow: 0 0 0 30px rgba(239, 77, 38, 0)}
+}
+
+.herobanner__flow > div:nth-child(2) > svg{
+animation-delay: 2s;
+}
+.herobanner__flow > div:nth-child(3) > svg{
+  animation-delay: 4s;
+}
+.herobanner__flow > div:nth-child(4) > svg{
+  animation-delay: 6s;
 }
 
 .herobanner__flow > div > span {
