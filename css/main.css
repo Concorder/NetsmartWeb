@@ -410,7 +410,9 @@ section {
 .w-100 {
   width: 100%;
 }
-
+.herobanner h4{
+  color: #ffb36a;
+}
 
 .no-padding {
   padding: 0 !important;
@@ -534,6 +536,8 @@ a:hover {
   overflow: hidden;
   position: relative;
   background: radial-gradient(var(--main-color), #500024);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .herobanner__container {
@@ -589,12 +593,12 @@ animation-delay: 2s;
 
 .line {
   height: 1px;
-  width: 94%;
+  width: calc(100% - 100px);
   position: absolute;
   border-bottom: 1px solid #fff;
   top: 30px;
   z-index: -1;
-  left: 3%;
+  left: 50px;
 }
 
 .sphere {
@@ -1098,7 +1102,7 @@ h1.cta {
 }
 
 .w-60 {
-  max-width: 60%;
+  max-width: 60%!important;
 }
 
 .benefit-subscription2 {
@@ -1237,7 +1241,7 @@ h1.cta {
 
 }
 
-.staticPhone-left, .staticPhone-right {
+.staticPhone-left, .staticPhone-right, .staticPhone-mobile {
   position: absolute;
   bottom: 0;
   width: 135px;
@@ -1248,8 +1252,9 @@ h1.cta {
   background-position: center;
 }
 
-.staticPhone-left img, .staticPhone-right img {
+.staticPhone-left img, .staticPhone-right img, .staticPhone-mobile img {
   width: inherit;
+  height: inherit;
 }
 
 .staticPhone-left {
@@ -1262,6 +1267,23 @@ h1.cta {
   animation: fadeInLeft 3s;
   animation-delay: 8s;
   animation-fill-mode: forwards;
+
+}
+.staticPhone-mobile {
+  display: none;
+  left: 100%;
+  width: auto;
+  height: 100%;
+  top: 0;
+  transform-origin: 0 0;
+  text-align: center;
+  background-image: url("../img/campaign1.jpg");
+  background-position: 20px;
+  opacity: 0;
+  animation: fadeInLeft 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  border-radius: 55px;
 
 }
 
@@ -1523,10 +1545,40 @@ label {
 }
 
 @media (max-width: 492px) {
+  p{
+    font-size: 15px;
+  }
+  .cases-dcb .rounded_container{
+    height: 230px;
+  }
+  .herobanner{
+    padding-top: 30px;
+  }
+  .herobanner__text-container{
+    width: 75%;
+    position: relative;
+  }
+
+  .hero__phoneContainer{
+    display: none;
+  }
+  .herobanner__flow{
+    margin-top: 30px;
+  }
+  section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .staticPhone-mobile {
+    display: block;
+  }
   h1.cta {
     font-size: 60px;
   }
-
+  .grid-container > .rounded_container > img.benefit-users {
+    top: 120px;
+    width: 100%;
+  }
   .mb-xs-1 {
     margin-bottom: 30px;
   }
