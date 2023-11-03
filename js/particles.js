@@ -438,7 +438,7 @@ particlesJS("particles-js", {
       "type": "circle",
       "stroke": {"width": 0, "color": "#000000"},
       "polygon": {"nb_sides": 5},
-      "image": {"src": "img/github.svg", "width": 100, "height": 100}
+      // "image": {"src": "img/github.svg", "width": 50, "height": 50}
     },
     "opacity": {
       "value": 0.5,
@@ -446,14 +446,14 @@ particlesJS("particles-js", {
       "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}
     },
     "size": {
-      "value": 3,
+      "value": 1,
       "random": true,
       "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}
     },
     "line_linked": {"enable": true, "distance": 150, "color": "#c10d3d", "opacity": 0.4, "width": 1},
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,

@@ -924,7 +924,7 @@ footer {
   grid-row: span 12;
 }
 
-#phone {
+#threeModel {
   width: 100%;
   max-width: 420px;
   height: 500px;
@@ -933,21 +933,21 @@ footer {
 
 }
 
-#phone {
+#threeModel {
   opacity: 0;
   position: relative;
   z-index: 2;
 }
 
 h1.cta {
-  font-size: 80px;
+  font-size: 90px;
 }
 
 .cta span {
   white-space: nowrap;
 }
 
-#phone.visible {
+#threeModel.visible {
   animation-delay: 4s;
   transition: 3s;
   animation: fadeIn 3s;
@@ -1235,9 +1235,8 @@ h1.cta {
   z-index: 0;
 }
 
-.hero__phoneContainer {
+.hero__threeModelContainer {
   position: relative;
-  filter: drop-shadow(20px 20px 10px #0000005e);
 
 }
 
@@ -1277,14 +1276,53 @@ h1.cta {
   top: 0;
   transform-origin: 0 0;
   text-align: center;
-  background-image: url("../img/campaign1.jpg");
   background-position: 20px;
   opacity: 0;
   animation: fadeInLeft 3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
   border-radius: 55px;
+  position: absolute;
+  filter: drop-shadow(0 15px 5px #0000005e);
+}
+.staticPhone-mobile img {
+  transform: perspective(600px) rotate3D(2, 2, -1, 25deg);
+  position: absolute;
+  border-radius: 10px;
+  width: 100px;
+  height: auto;
+  animation: heroFloat 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+.staticPhone-mobile img:nth-child(1) {
+  position: absolute;
+  z-index: 2;
+}
+.staticPhone-mobile img:nth-child(2) {
+  position: absolute;
+  top: 120px;
+  z-index: 1;
+}
+.terms h3{
+  margin-top: 60px;
+  margin-bottom: 30px;
+  color: var(--main-color);
+}
+.terms ul{
+  color: #222;
+  font-weight: 400;
+  font-size: 15px;
+}
+.terms p{
+  color: #222;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
 
+@keyframes heroFloat {
+  100%{transform: translate(0, -10%) perspective(600px) rotate3D(2, 2, -1, 55deg) }
 }
 
 @keyframes fadeInLeft {
@@ -1559,7 +1597,7 @@ label {
     position: relative;
   }
 
-  .hero__phoneContainer{
+  .hero__threeModelContainer{
     display: none;
   }
   .herobanner__flow{

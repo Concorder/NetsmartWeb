@@ -18,11 +18,11 @@ if (window.innerWidth > 492) {
           let camera;
           let renderer;
           let scene;
-          let phone;
+          let model;
 
           function init() {
-            let rotationSpeed = 0;
-            container = document.getElementById('phone');
+            let rotationSpeed = 0.001;
+            container = document.getElementById('threeModel');
             // Create scene
             scene = new THREE.Scene();
 
@@ -33,37 +33,33 @@ if (window.innerWidth > 492) {
 
             // Camera setup
             camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-            camera.position.set(0, 0, 1.8);
+            camera.position.set(0, 0,15);
 
             const ambient = new THREE.AmbientLight(0x404040, 2);
             scene.add(ambient);
 
             const light = new THREE.DirectionalLight(0xffffff, 1);
-            light.position.set(50, 0, 0);
+            light.position.set(-20, 20,20);
             scene.add(light);
 
             // Renderer
             renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             renderer.setSize(container.clientWidth, container.clientHeight);
             renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.toneMappingExposure = 0.7;
+            renderer.toneMappingExposure = 2;
             renderer.outputEncoding = THREE.sRGBEncoding;
             container.appendChild(renderer.domElement);
 
             // Load Model
             let loader = new GLTFLoader.GLTFLoader();
-            loader.load('./3d/phone3d/scene.gltf', function (gltf) {
-              phone = gltf.scene;
-              scene.add(phone);
-              phone.rotation.y = 2.7;
+            loader.load('./3d/planet_earth/scene.gltf', function (gltf) {
+              model = gltf.scene;
+              scene.add(model);
+              model.rotation.x = 0.2;
+              model.rotation.y = 1;
               animate();
             });
 
-            new RGBELoader().load('https://assets.codepen.io/7014830/studio.hdr', function (texture) {
-              texture.mapping = THREE.EquirectangularReflectionMapping;
-              scene.environment = texture;
-              container.classList.add('visible');
-            });
 
             window.addEventListener('dblclick', () => {
               console.log(camera.position);
@@ -73,12 +69,12 @@ if (window.innerWidth > 492) {
             function animate() {
               requestAnimationFrame(animate);
 
-              if (phone.rotation.y >= 3.8) {
-                rotationSpeed = -0.001;
-              } else {
-                if (phone.rotation.y <= 2.7) rotationSpeed = 0.001;
-              }
-              phone.rotation.y += rotationSpeed;
+              // if (model.rotation.y >= 3.8) {
+              //   rotationSpeed = -0.001;
+              // } else {
+              //   if (model.rotation.y <= 2.7) rotationSpeed = 0.001;
+              // }
+              model.rotation.y += rotationSpeed;
 
               renderer.render(scene, camera);
             }
