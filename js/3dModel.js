@@ -75,7 +75,7 @@ if (window.innerWidth > 492) {
               //   if (model.rotation.y <= 2.7) rotationSpeed = 0.001;
               // }
               model.rotation.y += rotationSpeed;
-
+container.classList.add("visible")
               renderer.render(scene, camera);
             }
           }
