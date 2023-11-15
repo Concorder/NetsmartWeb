@@ -1,3 +1,4 @@
+
 setCurrentYear = function () {
   const today = new Date();
   let fullYear = today.getFullYear()
@@ -147,9 +148,28 @@ function splashText() {
 splashText()
 
 //burger trigger
-document.querySelector('.menu-toggle').addEventListener('click', function () {
-  document.querySelector('.mobile-menu').classList.toggle('active');
+
+const mobileMenu = document.querySelector('.mobile-menu')
+const burger = document.querySelector('.menu-toggle')
+const header = document.querySelector('.header_container')
+burger.addEventListener('click', function () {
+  mobileMenu.classList.toggle('active');
 });
+
+const mobileLinks = mobileMenu.querySelectorAll('a')
+mobileLinks.forEach((link)=>{
+  link.addEventListener('click', hideMobileMenu)
+})
+function hideMobileMenu(){
+  mobileMenu.classList.remove('active');
+}
+document.body.addEventListener('click', function (event){
+  if (!mobileMenu.contains(event.target) && !header.contains(event.target)){
+    hideMobileMenu();
+  }
+})
+
+
 
 
 // //hacker text
