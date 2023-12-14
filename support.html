@@ -11,11 +11,8 @@
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -30,13 +27,13 @@
   <div class="container">
     <div class="header_container col-md-12">
       <a href="index.html">
-      <img class="header__logo" src="./img/logo.png" alt="logo">
+        <img class="header__logo" src="./img/logo.png" alt="logo">
       </a>
       <nav class="xs-d-none">
-        <a href="index.html#company">Company</a>
-        <a href="index.html#services">Services</a>
+        <a class="company_link" href="index.html#company_sections">Company</a>
+        <a class="service_link" href="index.html#service_sections">Services</a>
         <a href="https://www.linkedin.com/company/netsmart-cyprus-ltd./">News</a>
-        <a style="color: var(--main-color)">Support</a>
+        <a class="active" href="support.html">Support</a>
 
       </nav>
       <div class="menu-toggle">
@@ -44,13 +41,13 @@
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <a href="index.html#contact_us" class="btn btn-primary">Contact us</a>
+      <a href="#contact_us" class="btn btn-primary">Contact us</a>
 
       <nav class="mobile-menu">
-        <a href="/index.html">Company</a>
-        <a href="#services">Services</a>
+        <a href="index.html#company">Company</a>
+        <a href="index.html#services">Services</a>
         <a href="https://www.linkedin.com/company/netsmart-cyprus-ltd./">News</a>
-        <a href="#">Support</a>
+        <a class="active" href="support.html">Support</a>
       </nav>
     </div>
 
@@ -96,9 +93,9 @@
 <footer>
   <div class="col-sm-12 py-1 d-flex justify-content-between align-items-center">
     <nav>
-      <a href="#company">Company</a>
+      <a href="index.html#company">Company</a>
       <a href="#services">Services</a>
-      <a href="">Support</a>
+      <a  >Support</a>
 
     </nav>
     <img class="logoCenter" src="img/logo.png" alt="logo">
@@ -127,5 +124,6 @@
   </div>
   <div class="text-thin text-grey col-sm-12 text-center mb-1"> © Netsmart&nbsp;<span id="year"></span></div>
 </footer>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -618,6 +618,17 @@ nav a {
   text-decoration: none;
   margin: 0 10px;
   color: #5F3548;
+  position: relative;
+}
+
+nav a.active::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  background: var(--accent-color);
 }
 
 header {
@@ -692,6 +703,8 @@ nav {
   font-style: normal;
 
 }
+
+
 
 @keyframes lightsup {
   0% {
@@ -1414,6 +1427,7 @@ label {
   top: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 .mobile-menu a {
@@ -1461,6 +1475,7 @@ label {
     height: fit-content;
     transition: .3s;
     top: 45px;
+    pointer-events: auto;
   }
 
   .rounded_container {

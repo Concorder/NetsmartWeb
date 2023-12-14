@@ -1,4 +1,9 @@
 
+
+
+
+
+//burger trigger
 setCurrentYear = function () {
   const today = new Date();
   let fullYear = today.getFullYear()
@@ -7,147 +12,6 @@ setCurrentYear = function () {
 
 }
 setCurrentYear()
-
-//gsap block appearance
-const blocksUp = document.querySelectorAll(".gsapUp")
-blocksUp.forEach(block => {
-  gsap.from(block, {
-    scrollTrigger: {
-      trigger: block,
-      start: "top bottom",
-      end: "+=300px",
-      scrub: 0.5,
-      markers: false,
-      toggleActions: "restart none reverse none",
-    },
-    transform: "translate(0, +50px)",
-    opacity: 0,
-    marginBottom: 0,
-    duration: 1,
-    delay: .3,
-    repeat: 0,
-    repeatDelay: 0,
-    ease: "power1",
-    paused: false,
-  });
-});
-const blocksLeft = document.querySelectorAll(".gsapLeft")
-blocksLeft.forEach(block => {
-  gsap.from(block, {
-    scrollTrigger: {
-      trigger: block,
-      start: "top bottom",
-      end: "+=300px",
-      scrub: 1,
-      markers: false,
-      toggleActions: "restart none reverse none",
-    },
-    transform: "translate(-50px, 0)",
-    opacity: 0,
-    marginBottom: 0,
-    duration: 1,
-    delay: .3,
-    repeat: 0,
-    repeatDelay: 0,
-    ease: "power1",
-
-    paused: false,
-  });
-})
-const blocksRight = document.querySelectorAll(".gsapRight")
-blocksRight.forEach(block => {
-  gsap.from(block, {
-    scrollTrigger: {
-      trigger: block,
-      start: "top bottom",
-      end: "+=300px",
-      scrub: 1,
-      markers: false,
-      toggleActions: "restart none reverse none",
-    },
-    transform: "translate(+50px, 0)",
-    opacity: 0,
-    marginBottom: 0,
-    duration: 1,
-    delay: .3,
-    repeat: 0,
-    repeatDelay: 0,
-    ease: "power1",
-
-    paused: false,
-  });
-})
-
-//highlight text
-
-let sentences = document.querySelectorAll(".toLightUp span");
-sentences.forEach(function (target) {
-  gsap.to(target, {
-    scrollTrigger: {
-      trigger: target,
-      start: "top center",
-      end: `+=${(target.offsetHeight) * 1.5}`,
-      scrub: 1,
-      markers: false,
-      toggleClass: "highlight",
-    },
-    delay: .3,
-    repeat: 0,
-    repeatDelay: 0,
-    ease: "power0",
-    duration: 1,
-    paused: false,
-  });
-});
-//on screen trigger
-const blocksOnScreen = document.querySelectorAll(".onScreenTrigger")
-blocksOnScreen.forEach(function (target) {
-  gsap.to(target, {
-    scrollTrigger: {
-      trigger: target,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 1,
-      markers: false,
-      toggleClass: "onScreen",
-    },
-    delay: .3,
-    repeat: 0,
-    repeatDelay: 0,
-    ease: "power0",
-    duration: 1,
-    paused: false,
-  });
-});
-
-// splashtext
-function splashText() {
-  let cta = document.querySelector('.cta');
-  let newCta = "<span>" + cta.innerHTML.replaceAll(" ", " </span><span>") + "</span>";
-  cta.innerHTML = newCta;
-  let words = document.querySelectorAll('.cta span');
-  words.forEach(function (word) {
-
-    let newWord = "";
-    for (let i = 0; i < word.innerHTML.length; i++) {
-      let newSym = "<i>" + word.innerHTML[i] + "</i>";
-      newWord = newWord + newSym;
-    }
-    word.innerHTML = newWord;
-  });
-  let lamps = document.querySelectorAll('.cta i');
-  lamps.forEach(function (e) {
-    var randomPoseX = (Math.ceil(Math.random() * 2000) - 1000);
-    var randomPoseY = (Math.ceil(Math.random() * 2000) - 1000);
-    e.style.transform = `translate(${randomPoseX}%, ${randomPoseY}%`;
-    var randomDelay = (Math.ceil(Math.random() * 30)) / 10;
-    e.style.animationDelay = randomDelay + "s";
-  });
-}
-
-splashText()
-
-//burger trigger
 
 const mobileMenu = document.querySelector('.mobile-menu')
 const burger = document.querySelector('.menu-toggle')
@@ -172,7 +36,27 @@ document.body.addEventListener('click', function (event){
 
 
 
+
 // //hacker text
+
+// blocksOnScreen.forEach(function (target) {
+//   gsap.to(target, {
+//     scrollTrigger: {
+//       trigger: target,
+//       start: "top bottom",
+//       end: "bottom top",
+//       scrub: 1,
+//       markers: false,
+//       toggleClass: "onScreen",
+//     },
+//     delay: .3,
+//     repeat: 0,
+//     repeatDelay: 0,
+//     ease: "power0",
+//     duration: 1,
+//     paused: false,
+//   });
+// });
 // const alphabet = [
 //   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 //   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
