@@ -1442,12 +1442,31 @@ label {
 .content {
   padding: 20px;
 }
-
+@media (max-width: 992px) {
+  .cases-dcb .rounded_container {
+    height: 230px;
+  }
+  .contactForm{
+    max-width: 420px;
+    margin: auto;
+  }
+  footer .logoCenter {
+    position: relative;
+    transform: unset;
+    left: unset;
+    margin: 30px auto;
+  }
+}
 @media (max-width: 768px) {
   .header__logo {
     height: 26px;
   }
-
+  footer > div {
+    flex-direction: column;
+  }
+  .mobile-menu a.active{
+    color: var(--main-color);
+  }
   .header_container .btn-primary {
     font-size: 12px;
   }
@@ -1581,6 +1600,13 @@ label {
     top: 70%;
     width: 100%;
   }
+  .footer_second{
+    text-align: center;
+  }
+  .footer_second svg{
+    margin-bottom: 30px;
+  }
+
 
 }
 
@@ -1588,9 +1614,7 @@ label {
   p{
     font-size: 15px;
   }
-  .cases-dcb .rounded_container{
-    height: 230px;
-  }
+
   .herobanner{
     padding-top: 30px;
   }
