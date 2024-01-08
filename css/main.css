@@ -937,7 +937,14 @@ a:hover, a:focus{
     border-bottom: 1px solid var(--background-alt);
     font-weight: 400;
 }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
 .text-input:focus, .text-input:active {
     border: 0;
     border-bottom: 1px solid var(--main-color);
