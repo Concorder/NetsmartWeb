@@ -135,8 +135,8 @@ function splashText() {
         var randomPoseX = (Math.ceil(Math.random() * 2000) - 1000);
         var randomPoseY = (Math.ceil(Math.random() * 2000) - 1000);
         e.style.transform = `translate(${randomPoseX}%, ${randomPoseY}%`;
-        var randomDelay = (Math.ceil(Math.random() * 10)) / 5;
-        e.style.animationDelay = randomDelay + "s";
+        // var randomDelay = (Math.ceil(Math.random() * 10)) / 5;
+        // e.style.animationDelay = randomDelay + "s";
     });
 }
 
