@@ -432,8 +432,8 @@ Object.deepExtend = function (e, a) {
 // particles setup
 particlesJS("particles-js", {
   "particles": {
-    "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-    "color": {"value": "#c10d3d"},
+    "number": {"value": 10, "density": {"enable": true, "value_area": 20}},
+    "color": {"value": "#fff"},
     "shape": {
       "type": "circle",
       "stroke": {"width": 0, "color": "#000000"},
@@ -441,19 +441,19 @@ particlesJS("particles-js", {
       // "image": {"src": "img/github.svg", "width": 50, "height": 50}
     },
     "opacity": {
-      "value": 0.5,
+      "value": 1,
       "random": false,
       "anim": {"enable": false, "speed": 1, "opacity_min": 0.1, "sync": false}
     },
     "size": {
-      "value": 1,
+      "value": 3,
       "random": true,
       "anim": {"enable": false, "speed": 40, "size_min": 0.1, "sync": false}
     },
-    "line_linked": {"enable": true, "distance": 150, "color": "#c10d3d", "opacity": 0.4, "width": 1},
+    "line_linked": {"enable": true, "distance": 80, "color": "#fff", "opacity": 1, "width": 1},
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 0.3,
       "direction": "none",
       "random": false,
       "straight": false,

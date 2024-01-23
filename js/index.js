@@ -92,7 +92,7 @@ sentences.forEach(function (target) {
 //on screen trigger
 const blocksOnScreen = document.querySelectorAll(".onScreenTrigger")
 //nav links highlight
-const navigationLinks = document.querySelectorAll('.company_link, .service_link');
+const navigationLinks = document.querySelectorAll('.company_link, .payments_link, .messaging_link');
 
 navigationLinks.forEach(link => {
     const targetSelector = link.getAttribute('href');

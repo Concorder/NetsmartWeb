@@ -4,14 +4,7 @@
 
 
 //burger trigger
-setCurrentYear = function () {
-  const today = new Date();
-  let fullYear = today.getFullYear()
-  const yearSpan = document.getElementById("year");
-  yearSpan.innerText = fullYear
 
-}
-setCurrentYear()
 
 const mobileMenu = document.querySelector('.mobile-menu')
 const burger = document.querySelector('.menu-toggle')
@@ -125,6 +118,15 @@ document.body.addEventListener('click', function (event){
 //   spans.forEach(span => span.classList.remove("glow"));
 // }
 // //hackertext animation ends
+
+setCurrentYear = function () {
+  const today = new Date();
+  let fullYear = today.getFullYear()
+  const yearSpan = document.getElementById("year");
+  yearSpan.innerText = fullYear
+
+}
+setCurrentYear()
 
 
 
