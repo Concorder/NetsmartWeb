@@ -25,6 +25,11 @@ document.body.addEventListener('click', function (event){
     hideMobileMenu();
   }
 })
+document.body.addEventListener('touchmove', function (event){
+  if (!mobileMenu.contains(event.target) && !header.contains(event.target)){
+    setTimeout(hideMobileMenu, 1000)
+  }
+})
 
 
 

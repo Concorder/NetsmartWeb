@@ -260,6 +260,7 @@ textarea {
     width: auto;
 }
 
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
@@ -699,13 +700,78 @@ a:hover {
     margin-bottom: 30px;
 }
 
-nav a {
+nav a, nav ul {
     text-decoration: none;
     margin: 0 10px;
     color: #5F3548;
     position: relative;
-}
+    text-align: left;
+    cursor: pointer;
 
+}
+.desktop-menu{
+    display: flex;
+    height: 24px;
+
+}
+.desktop-menu > *{
+    margin: 0 15px;
+}
+.desktop-menu ul::before {
+    border: 2px solid var(--main-color);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    top: -6px;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    position: absolute;
+    /* left: 5px; */
+    transition: all .3s ease-out;
+    box-sizing: border-box;
+    z-index: -1;
+    right: 4px;
+    top: 4px;
+}
+nav li {
+    text-align: left;
+    background: var(--background-default);
+    list-style: none;
+    overflow: hidden;
+    padding: 10px 10px;
+    border-bottom: 2px solid var(--background-alt);
+    transition: 0.3s;
+    color: #5F3548;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+}
+nav li:hover{
+    color: var(--main-color);
+}
+nav > ul:hover::after{
+    content: '';
+    height: 0px !important;
+}
+nav ul:hover li {
+    height: unset;
+    padding: 10px 10px;
+    border-bottom: 2px solid var(--background-alt);
+    opacity: 1;
+    pointer-events: auto;
+}
+nav > ul {
+    padding-left: 0;
+}
+nav ul:hover::before {
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    top: 12px;
+}
 /*nav a.active {*/
 /*  text-decoration: none;*/
 /*  margin: 0 10px;*/
@@ -713,15 +779,18 @@ nav a {
 /*  position: relative;*/
 /*}*/
 
-nav a.active::after {
+nav > *.active::after {
     content: '';
     height: 2px;
     width: 100%;
     position: absolute;
-    bottom: -16px;
+    bottom: -26px;
     left: 0;
     background: var(--accent-color);
 
+}
+nav:hover li.active {
+    border-bottom: 2px solid var(--accent-color);
 }
 
 header {
@@ -739,12 +808,10 @@ header {
     display: flex;
     margin: auto;
     align-content: center;
-    align-items: center;
     justify-content: space-between;
     padding-top: 8px;
     padding-bottom: 8px;
 }
-
 .header__logo {
     width: auto;
     height: 36px;
@@ -900,7 +967,7 @@ h2 {
 
 }
 
-a:hover, a:focus {
+a:hover, a:focus, nav ul:hover {
     color: var(--main-color)
 }
 
@@ -1502,6 +1569,7 @@ a:hover {
     margin-bottom: 15px;
 }
 
+
 @keyframes heroFloat {
     100% {
         transform: translate(0, -10%) perspective(600px) rotate3D(2, 2, -1, 55deg)
@@ -1591,15 +1659,19 @@ label {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    opacity: 0;
 }
 
 .mobile-menu a {
     opacity: 1;
     color: #5F3548;
+    text-align: center;
     text-decoration: none;
     font-size: 20px;
     padding: 10px 0;
     border-bottom: 1px solid var(--background-alt);
+    text-align: left;
+
 }
 
 .btn {
@@ -1645,7 +1717,12 @@ label {
     .cases-dcb .rounded_container {
         height: 230px;
     }
+    .btn .btn-outline-primary{
 
+    }
+    .desktop-menu > *{
+        margin: 0 10px;
+    }
     .contactForm {
         max-width: 420px;
         margin: auto;
@@ -1661,9 +1738,13 @@ label {
 
 @media (max-width: 768px) {
     .header__logo {
-        height: 26px;
+        height: 30px;
+        margin-top: 4px;
     }
-
+.header_container .btn{
+    padding: 3px 10px;
+    height: 32px;
+}
     footer > div {
         flex-direction: column;
     }
@@ -1701,6 +1782,8 @@ label {
         transition: .3s;
         top: 45px;
         pointer-events: auto;
+        box-shadow: 0 15px 10px #00000045;
+        opacity: 1;
     }
 
     .rounded_container {
