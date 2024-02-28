@@ -709,10 +709,10 @@ nav a, nav ul {
     cursor: pointer;
 
 }
-.desktop-menu{
+.desktop-menu {
     display: flex;
-    height: 24px;
-
+    height: 36px;
+    padding-top: 6px;
 }
 .desktop-menu > *{
     margin: 0 15px;
@@ -743,12 +743,15 @@ nav li {
     list-style: none;
     overflow: hidden;
     padding: 10px 10px;
-    border-bottom: 2px solid var(--background-alt);
+
     transition: 0.3s;
     color: #5F3548;
     font-size: 15px;
-    opacity: 0;
     pointer-events: none;
+}
+.desktop-menu li{
+    opacity: 0;
+    border-bottom: 2px solid var(--background-alt);
 }
 nav li:hover{
     color: var(--main-color);
@@ -784,7 +787,7 @@ nav > *.active::after {
     height: 2px;
     width: 100%;
     position: absolute;
-    bottom: -26px;
+    bottom: -8px;
     left: 0;
     background: var(--accent-color);
 
@@ -795,12 +798,18 @@ nav:hover li.active {
 
 header {
     text-align: center;
-    background: #FFFFFFCD;
+    background: #FFF;
     z-index: 999;
     position: fixed;
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
+    transition: transform 0.3s, opacity 0.3s;
+}
+header.fadeOut{
+    transform: translate(0, -52px);
+    opacity: 0;
+
 }
 
 .header_container {
@@ -811,6 +820,7 @@ header {
     justify-content: space-between;
     padding-top: 8px;
     padding-bottom: 8px;
+    align-items: center;
 }
 .header__logo {
     width: auto;
@@ -826,7 +836,6 @@ header {
 nav {
     display: inline-block;
     text-align: center;
-    padding: 6px;
 }
 
 .cta {
@@ -1655,7 +1664,7 @@ label {
     background-color: var(--background-default);
     padding: 15px 15px 0;
     position: fixed;
-    top: 0;
+    top: 35px;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -1723,6 +1732,10 @@ label {
     .desktop-menu > *{
         margin: 0 10px;
     }
+    .mobile-menu li a{
+        margin: 0 10px;
+        font-size: 16px;
+    }
     .contactForm {
         max-width: 420px;
         margin: auto;
@@ -1738,8 +1751,10 @@ label {
 
 @media (max-width: 768px) {
     .header__logo {
-        height: 30px;
+        width: 131px;
         margin-top: 4px;
+        max-width: 35vw;
+        height: auto;
     }
 .header_container .btn{
     padding: 3px 10px;
@@ -1772,7 +1787,6 @@ label {
 
     .mobile-menu {
         display: block;
-        top: -160%;
     }
 
     .mobile-menu.active {

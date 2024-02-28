@@ -4,8 +4,6 @@
 
 
 //burger trigger
-
-
 const mobileMenu = document.querySelector('.mobile-menu')
 const burger = document.querySelector('.menu-toggle')
 const header = document.querySelector('.header_container')
@@ -30,6 +28,67 @@ document.body.addEventListener('touchmove', function (event){
     setTimeout(hideMobileMenu, 1000)
   }
 })
+
+//hide header on scroll/swipe
+let lastScrollTop = 0;
+const headerBlock = document.getElementById('header');
+
+if (window.innerWidth >= 768) {
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll down
+      headerBlock.classList.add('fadeOut');
+    } else {
+      // Scroll up
+      headerBlock.classList.remove('fadeOut');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+
+  // Cursor event
+  let isHovering = false;
+
+  // Function to check if the cursor is within the specified range from the top
+  function isCursorInRange() {
+    return window.pageYOffset <= 52;
+  }
+
+  // Function to show or hide the header based on cursor position
+  function toggleHeaderVisibility() {
+    if (isHovering || isCursorInRange()) {
+      headerBlock.classList.remove('fadeOut');
+    }
+  }
+
+  // Event listener for mouse movement
+  document.addEventListener('mousemove', function(event) {
+    isHovering = event.clientY <= 52;
+    toggleHeaderVisibility();
+  });
+
+  // Event listener for scroll
+  window.addEventListener('scroll', function() {
+    toggleHeaderVisibility();
+  });
+} else {
+  window.addEventListener('touchmove', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll down
+      headerBlock.classList.add('fadeOut');
+    } else {
+      // Scroll up
+      headerBlock.classList.remove('fadeOut');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+}
+
 
 
 
